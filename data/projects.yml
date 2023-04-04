@@ -14,6 +14,6 @@
   url: https://www.google.com
 
 - name: Kotoback
-  description: Make flashcards out of an epub
+  description: App to automatically generate flashcards from an epub format ebook
   image: projects/placeholder.png
   url: http://www.kotoback.net
