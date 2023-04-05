@@ -1,0 +1,33 @@
+<div class="row my-5">
+  <div class="col-12">
+    <div class="container">
+      <div id="projects">
+        <h2> Projects</h2>
+        <div class="glide">
+          <div class="glide__track" data-glide-el="track">
+            <div class="glide__arrows" data-glide-el="controls">
+              <button class="glide__arrow glide__arrow--left" data-glide-dir="<">prev</button>
+              <button class="glide__arrow glide__arrow--right" data-glide-dir=">">next</button>
+            </div>
+            <ul class="glide__slides">
+              <% data.projects.each do |project| %>
+                <li class="card-product glide_slide">
+                  <%= image_tag project.image, alt: "project image" %>
+                  <div class="card-product-infos">
+                    <div class="d-flex justify-content-between align-items-center">
+                      <h2><%= project.name %></h2>
+                      <% link_to project.url, class: 'external-link', target: '_blank' do %>
+                        <i class="fas fa-external-link-alt"></i>
+                      <% end %>
+                    </div>
+                    <p><%= project.description %></p>
+                  </div>
+                </li>
+              <% end %>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
